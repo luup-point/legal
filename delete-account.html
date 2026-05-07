@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support — LUUP.</title>
-  <meta name="description" content="Get help with LUUP." />
+  <title>Delete Account — LUUP.</title>
+  <meta name="description" content="How to delete your LUUP. account and associated data." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@300;400&display=swap" rel="stylesheet" />
@@ -48,143 +48,92 @@
     .sub {
       font-size: 0.88rem;
       margin-bottom: 2.25rem;
+      line-height: 1.6;
     }
 
-    .field {
-      margin-bottom: 1rem;
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 1.5rem;
     }
 
-    label {
-      display: block;
-      font-size: 0.75rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-bottom: 0.45rem;
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid #070709;
     }
 
-    input, textarea {
-      width: 100%;
-      background: #111;
-      border: 1px solid #1e1e1e;
-      border-radius: 10px;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 300;
-      font-size: 0.95rem;
-      padding: 0.8rem 1rem;
-      outline: none;
-      transition: border-color 0.15s;
-      resize: none;
-    }
+    .step:last-child { border-bottom: none; }
 
-    input::placeholder, textarea::placeholder { color: #f9f9f7; }
-    input:focus, textarea:focus { border-color: #bfff00; }
-
-    textarea { height: 130px; }
-
-    .btn {
-      margin-top: 0.5rem;
-      width: 100%;
-      background: #bfff00;
-      color: #090907;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 400;
-      font-size: 0.9rem;
-      padding: 0.85rem;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: opacity 0.15s, transform 0.15s;
-    }
-
-    .btn:hover { opacity: 0.88; }
-    .btn:active { transform: scale(0.98); }
-
-    .success {
-      display: none;
-      text-align: center;
-      padding: 2rem 0;
-    }
-
-    .success-icon {
-      width: 48px;
-      height: 48px;
+    .step-num {
+      width: 24px;
+      height: 24px;
       border-radius: 50%;
       background: #bfff00;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 1.25rem;
-    }
-
-    .success h2 {
+      font-size: 0.7rem;
+      color: #070709;
+      flex-shrink: 0;
+      margin-top: 1px;
       font-family: 'Archivo Black', sans-serif;
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
     }
 
-    .success p { font-size: 0.85rem;}
+    .step-text {
+      font-size: 0.9rem;
+      color: #f9f9f7;
+      line-height: 1.5;
+    }
+
+    .note {
+      font-size: 0.8rem;
+      color: #f9f9f7;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .note a {
+      color: #bfff00;
+      text-decoration: none;
+    }
+
+    .note a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <div class="wrap">
     <img class="logo" src="/assets/logo.png" alt="LUUP." />
 
-    <div id="form-section">
-      <h1>How can we help?</h1>
-      <p class="sub">Please, fill in the form below so we can assist you.</p>
+    <h1>Delete your account.</h1>
+    <p class="sub">To permanently delete your account and all associated data, follow the steps below inside the app.</p>
 
-      <form action="https://formspree.io/f/mlgznevy" method="POST" id="support-form">
-        <div class="field">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your name" required />
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="your@email.com" required />
-        </div>
-        <div class="field">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Tell us what's going on…" required></textarea>
-        </div>
-        <button class="btn" type="submit">Send message</button>
-      </form>
-    </div>
-
-    <div class="success" id="success">
-      <div class="success-icon">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <path d="M4 10l4.5 4.5L16 6" stroke="#080808" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">Open the <strong>LUUP. app</strong> and make sure you are logged in.</div>
       </div>
-      <h2>Message sent.</h2>
-      <p>We'll be in touch soon.</p>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">Go to your <strong>Profile</strong> tab.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">Tap <strong>Settings</strong>.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-text">Tap <strong>Delete Account</strong> and confirm your choice.</div>
+      </div>
     </div>
-  </div>
 
-  <script>
-    document.getElementById('support-form').addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const btn = this.querySelector('.btn');
-      btn.textContent = 'Sending…';
-      btn.disabled = true;
-      try {
-        const res = await fetch(this.action, {
-          method: 'POST',
-          body: new FormData(this),
-          headers: { 'Accept': 'application/json' }
-        });
-        if (res.ok) {
-          document.getElementById('form-section').style.display = 'none';
-          document.getElementById('success').style.display = 'block';
-        } else {
-          btn.textContent = 'Something went wrong — try again';
-          btn.disabled = false;
-        }
-      } catch {
-        btn.textContent = 'Something went wrong — try again';
-        btn.disabled = false;
-      }
-    });
-  </script>
+    <p class="note">
+      Your account and all associated personal data — including your name, email address, profile, and location history — will be permanently deleted within <strong style="color:#f9f9f7">24 hours</strong>. This action cannot be undone.<br /><br />
+      Need help? Contact us at <a href="mailto:support@luuppoint.com">support@luuppoint.com</a>
+    </p>
+  </div>
 </body>
 </html>
